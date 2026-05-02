@@ -16,8 +16,11 @@ fi
 echo "→ Rebuilding index.html from CSV..."
 python3 rebuild_index.py
 
+echo "→ Exporting Bridle & Bit RTF..."
+python3 export_bridle_bit.py
+
 echo "→ Staging files..."
-git add ArizonaHorseCalendar.csv index.html
+git add ArizonaHorseCalendar.csv index.html BridleBit_Events.rtf
 
 echo "→ Committing..."
 git commit -m "$1"
