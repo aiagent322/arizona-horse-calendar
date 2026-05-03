@@ -112,8 +112,8 @@ def event_body(text):
     return para(4, e(text))
 
 def event_contact(text):
-    # Style 5: Contact line — 7pt italic
-    return para(5, f"\\i {e(text)}\\i0")
+    # Contact line — 10pt bold, centered, inline (no stylesheet)
+    return f"{{\\pard\\qc\\f0\\fs20\\b\\sl240\\slmult0 {e(text)}\\b0\\par}}\n"
 
 def divider():
     # Thin rule between events (blank paragraph with bottom border)
